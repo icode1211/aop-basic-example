@@ -13,7 +13,7 @@
 
 
 ### EncodeBase64Aop 모듈
-공통 관심사 : Controller에서 넘어온 인수 암호화
+공통 관심사 : Controller에서 넘어온 parameter 암호화
 
 * @EncodeBase64 어노테이션을 사용할 경우 EncodeBase64Aop 의 around 코드 실행 
 
