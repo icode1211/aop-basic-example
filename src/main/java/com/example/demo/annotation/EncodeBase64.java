@@ -7,5 +7,5 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface EncodeBase64 {
+public @interface EncodeBase64 {    // 사용자 정의 어노테이션
 }
