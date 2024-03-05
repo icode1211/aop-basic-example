@@ -1,5 +1,6 @@
 package com.example.demo.aspect;
 
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -7,6 +8,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StopWatch;
 
+@Slf4j
 @Aspect
 @Component
 public class TimerAop {
@@ -30,6 +32,6 @@ public class TimerAop {
         stopWatch.stop();
 
         // 몇 초 걸렸는지 계산
-        System.out.println("method name: " + joinPoint.getSignature().getName() + ", " + stopWatch.getTotalTimeMillis() + " milliseconds");
+        log.info("method name: " + joinPoint.getSignature().getName() + ", " + stopWatch.getTotalTimeMillis() + " milliseconds");
     }
 }
